@@ -13,12 +13,18 @@ class RestaurantsVC: UIViewController {
     
     
     var categories = [Categories]()
+     var providers = [ProvidersByCatagories]()
     
     @IBOutlet weak var categoriesCV: UICollectionView!
+    @IBOutlet weak var bottomTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bottomTableView.estimatedRowHeight = bottomTableView.frame.height/1.5
         
+    }
+    @IBAction func sideMenuButt(_ sender: UIButton) {
+       NotificationCenter.default.post(name: NSNotification.Name("sideMenu"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,11 +38,25 @@ class RestaurantsVC: UIViewController {
                 
             }
         }
+        DispatchQueue.main.async {
+            let url = "http://delivery.cloudtouch-test.com/api/providers?"
+            API.get(url: url, parameter: nil, headers: nil
+                , completion: { (check, Response : [ProvidersByCatagories]?) in
+                    guard let response = Response else {return}
+                    self.providers = response
+                    self.bottomTableView.reloadData()
+                    
+                    
+                    
+            })
+            
+        }
     }
     
 }
 
 extension RestaurantsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
     }
@@ -44,7 +64,7 @@ extension RestaurantsVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoriesCell", for: indexPath) as! CategoriesCell
         
-        ////// for get image from the internet
+        ////// for get image from the internet using kingFisher
         var stringImage = String(describing: categories[indexPath.row].image ?? "")
         if stringImage.contains(" ") {
             stringImage = stringImage.replacingOccurrences(of: " ", with: "%20")

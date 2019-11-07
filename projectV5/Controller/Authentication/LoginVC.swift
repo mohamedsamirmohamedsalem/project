@@ -27,7 +27,7 @@ class LoginVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func logInBut(_ sender: UIButton) {
-        
+        // hide keyboard when touch up screen
         self.view.endEditing(true)
         let email = emailLB.text ?? ""
         let password = passwordLB.text ?? ""

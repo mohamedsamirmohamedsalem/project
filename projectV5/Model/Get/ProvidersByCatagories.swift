@@ -19,7 +19,7 @@ struct ProvidersByCatagories : Codable {
 }
 
 // MARK: - Review
-struct Review : Codable {
+struct Review : Codable{
     let id, clientID, providerID: Int?
     let rate: Double?
     let review: String?

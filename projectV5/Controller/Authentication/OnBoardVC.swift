@@ -10,17 +10,17 @@ import UIKit
 
 class OnBoardVC: UIViewController {
     
-    // Constants
-    //Instance Variables
-    /////for timer using
+
+    //MARK :- Instance Variables
+    //for timer using
     var scrollCurentIndex = 0
     var timer : Timer?
-    let imageArray : [UIImage] = [#imageLiteral(resourceName: "onBoardFood "),#imageLiteral(resourceName: "menu icon "),#imageLiteral(resourceName: "Happy Meal "),#imageLiteral(resourceName: "Happy Meal "),#imageLiteral(resourceName: "onBoardFood ")]
+    let imageArray : [UIImage] = [#imageLiteral(resourceName: "FindFoods"),#imageLiteral(resourceName: "Fast Delivery"),#imageLiteral(resourceName: "Live tracking")]
     let firstLabelArray : [String] = ["Find Foods You Love","Fast Delivery","Live Tracking","Find Foods You Love","Fast Delivery"]
     let secondLabelArray : [String] = ["Discover the best foods from over 1,000 resturant","Fast delivery to your home,office and wherever you are","Real live tracking of your food on the app after ordered","Find Foods You Love","Fast Delivery"]
     
     
-    //Pre-linked IBOutlet
+    //MARK :- IBOutlet
     @IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var createAccountBut: UIButton!
@@ -56,9 +56,6 @@ class OnBoardVC: UIViewController {
         
     }
     @IBAction func LoginBut(_ sender: UIBarButtonItem) {
-      
-        
-        
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
         present(vc, animated: true, completion: nil)

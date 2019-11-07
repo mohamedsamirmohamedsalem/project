@@ -10,14 +10,13 @@ import UIKit
 
 class GeneralSideMenuVC: UIViewController {
     
-    
+    //MARK :-  IBOutlets
     @IBOutlet weak var sideMenuContrain: NSLayoutConstraint!
-    
     @IBOutlet weak var sideMenuContainerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //send notifiation to all viewControllers
         NotificationCenter.default.addObserver(self, selector: #selector(showSideMenu(_:)), name: NSNotification.Name("sideMenu"), object: nil)
-        
     }
     
     @objc func showSideMenu(_ notify:NSNotification){

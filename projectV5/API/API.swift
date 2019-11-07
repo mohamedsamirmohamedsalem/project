@@ -17,7 +17,7 @@ class API: NSObject {
     class func post<T:Codable>(_ url:String,parameter:[String:Any]?,headers:[String:String]?,completion: @escaping (_ check:Bool,_ response:T?)->Void){
         Alamofire.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             if response.result.isSuccess{
-                guard let data = response.data else {return}
+                guard let data = response.data else {print("Can't get data from the server");return}
                 do {
                     let jsonResponse = try JSONDecoder().decode(T.self, from: data)
                     completion(true,jsonResponse)
@@ -36,7 +36,7 @@ class API: NSObject {
     class func get<T:Codable>(url:String,parameter:[String:Any]?,headers:[String:String]?,completion:@escaping(_ check:Bool ,_ response:T?)->Void){
         Alamofire.request(url, method: .get, parameters: parameter, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             if response.result.isSuccess{
-                guard let data = response.data else {return}
+                guard let data = response.data else {print("Can't get data from the server");return}
                 do {
                     let jsonResponse = try JSONDecoder().decode(T.self, from: data)
                     completion(true,jsonResponse)

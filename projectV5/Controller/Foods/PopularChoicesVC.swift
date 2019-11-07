@@ -9,16 +9,17 @@
 import UIKit
 
 class PopularChoicesVC: UIViewController ,UICollectionViewDataSource , UICollectionViewDelegate {
-    
-   
-    
+
+    //MARK :- IBOutlets
     @IBOutlet weak var collectionViewOut: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOut.delegate = self
         collectionViewOut.dataSource = self
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }

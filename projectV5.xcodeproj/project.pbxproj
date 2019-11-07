@@ -17,7 +17,6 @@
 		6015662F234922AD00D9EA45 /* PopularChoicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6015662E234922AD00D9EA45 /* PopularChoicesVC.swift */; };
 		601566312349233A00D9EA45 /* PopularChociesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601566302349233A00D9EA45 /* PopularChociesCell.swift */; };
 		60156633234923F700D9EA45 /* PopularTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60156632234923F700D9EA45 /* PopularTableViewController.swift */; };
-		609DAA9F233D707400ADA03D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 609DAA9E233D707400ADA03D /* Assets.xcassets */; };
 		609DAAA2233D707400ADA03D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609DAAA0233D707400ADA03D /* LaunchScreen.storyboard */; };
 		609DAAE5233D70E500ADA03D /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609DAAC3233D70E400ADA03D /* RegisterResponse.swift */; };
 		609DAAE6233D70E500ADA03D /* LogInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609DAAC4233D70E400ADA03D /* LogInResponse.swift */; };
@@ -42,6 +41,8 @@
 		609DAAF9233D70E500ADA03D /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609DAAE2233D70E500ADA03D /* Localizable.swift */; };
 		609DAAFA233D70E500ADA03D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609DAAE4233D70E500ADA03D /* API.swift */; };
 		609DAAFC233D711100ADA03D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609DAAFB233D711100ADA03D /* Main.storyboard */; };
+		60B9E20D23719C1C0055965E /* Generic+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B9E20C23719C1B0055965E /* Generic+Extention.swift */; };
+		60DCAC5D2374CEDA00136547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60DCAC5C2374CEDA00136547 /* Assets.xcassets */; };
 		60EA10DB2350AC5300925C4D /* ProvidersByCatagories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA10DA2350AC5300925C4D /* ProvidersByCatagories.swift */; };
 		60EA10DD2350BA0300925C4D /* Offers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA10DC2350BA0300925C4D /* Offers.swift */; };
 		E0EA89DFCAEEC5DE14E3A96C /* Pods_projectV5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A998EE689031805128BD1D0 /* Pods_projectV5.framework */; };
@@ -60,7 +61,6 @@
 		601566302349233A00D9EA45 /* PopularChociesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularChociesCell.swift; sourceTree = "<group>"; };
 		60156632234923F700D9EA45 /* PopularTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTableViewController.swift; sourceTree = "<group>"; };
 		609DAA94233D707300ADA03D /* projectV5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectV5.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		609DAA9E233D707400ADA03D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		609DAAA1233D707400ADA03D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		609DAAA3233D707400ADA03D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		609DAAC3233D70E400ADA03D /* RegisterResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
@@ -87,6 +87,8 @@
 		609DAAE2233D70E500ADA03D /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		609DAAE4233D70E500ADA03D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		609DAAFB233D711100ADA03D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		60B9E20C23719C1B0055965E /* Generic+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generic+Extention.swift"; sourceTree = "<group>"; };
+		60DCAC5C2374CEDA00136547 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60EA10DA2350AC5300925C4D /* ProvidersByCatagories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersByCatagories.swift; sourceTree = "<group>"; };
 		60EA10DC2350BA0300925C4D /* Offers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offers.swift; sourceTree = "<group>"; };
 		6A998EE689031805128BD1D0 /* Pods_projectV5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_projectV5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,16 +128,14 @@
 		609DAA96233D707300ADA03D /* projectV5 */ = {
 			isa = PBXGroup;
 			children = (
-				609DAAFB233D711100ADA03D /* Main.storyboard */,
+				60B9E20E23719D580055965E /* Supporting Files */,
 				609DAAE3233D70E500ADA03D /* API */,
 				609DAAD1233D70E400ADA03D /* Layout */,
 				609DAADE233D70E500ADA03D /* Localization */,
+				60B9E20B23719C1B0055965E /* Generic+Extention */,
 				609DAAC1233D70E400ADA03D /* Model */,
 				609DAADB233D70E400ADA03D /* View */,
 				609DAAC7233D70E400ADA03D /* Controller */,
-				609DAA9E233D707400ADA03D /* Assets.xcassets */,
-				609DAAA0233D707400ADA03D /* LaunchScreen.storyboard */,
-				609DAAA3233D707400ADA03D /* Info.plist */,
 			);
 			path = projectV5;
 			sourceTree = "<group>";
@@ -171,7 +171,6 @@
 		609DAAC7233D70E400ADA03D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				609DAACA233D70E400ADA03D /* AppDelegate.swift */,
 				609DAACB233D70E400ADA03D /* Authentication */,
 				609DAAC8233D70E400ADA03D /* Foods */,
 			);
@@ -237,6 +236,7 @@
 		609DAADB233D70E400ADA03D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				609DAAFB233D711100ADA03D /* Main.storyboard */,
 				609DAADC233D70E400ADA03D /* OnBoardCell.swift */,
 				609DAADD233D70E400ADA03D /* CategoriesCell.swift */,
 				60013D632348AD76004FAC93 /* BottomCategoriesCell.swift */,
@@ -262,6 +262,25 @@
 				609DAAE4233D70E500ADA03D /* API.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		60B9E20B23719C1B0055965E /* Generic+Extention */ = {
+			isa = PBXGroup;
+			children = (
+				60B9E20C23719C1B0055965E /* Generic+Extention.swift */,
+			);
+			path = "Generic+Extention";
+			sourceTree = "<group>";
+		};
+		60B9E20E23719D580055965E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				609DAACA233D70E400ADA03D /* AppDelegate.swift */,
+				609DAAA0233D707400ADA03D /* LaunchScreen.storyboard */,
+				609DAAA3233D707400ADA03D /* Info.plist */,
+				60DCAC5C2374CEDA00136547 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D16495A872A44D396DCFC559 /* Pods */ = {
@@ -344,7 +363,7 @@
 			files = (
 				609DAAA2233D707400ADA03D /* LaunchScreen.storyboard in Resources */,
 				609DAAF8233D70E500ADA03D /* Localizable.strings in Resources */,
-				609DAA9F233D707400ADA03D /* Assets.xcassets in Resources */,
+				60DCAC5D2374CEDA00136547 /* Assets.xcassets in Resources */,
 				609DAAFC233D711100ADA03D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60B9E20D23719C1C0055965E /* Generic+Extention.swift in Sources */,
 				609DAAE6233D70E500ADA03D /* LogInResponse.swift in Sources */,
 				609DAAF1233D70E500ADA03D /* LabelCorners.swift in Sources */,
 				609DAAF9233D70E500ADA03D /* Localizable.swift in Sources */,
@@ -581,7 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = projectV5/Info.plist;
+				INFOPLIST_FILE = "projectV5/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -599,7 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = projectV5/Info.plist;
+				INFOPLIST_FILE = "projectV5/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -18,7 +18,7 @@ import UIKit
         super.layoutSubviews()
         self.layer.cornerRadius = self.frame.height/2
         self.layer.borderWidth = 2.0
-        self.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        self.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         self.clipsToBounds = true
     }
 }

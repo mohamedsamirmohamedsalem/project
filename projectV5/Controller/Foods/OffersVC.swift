@@ -20,25 +20,24 @@ class OffersVC: UIViewController , UITableViewDelegate , UITableViewDataSource{
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
             let url = "http://delivery.cloudtouch-test.com/api/products/provider/1?brand=&st=ar&page=1"
-            let parameter = ["brand":"","st":"ar","page":"1"]
+          //let parameter = ["brand":"","st":"ar","page":"1"]
             API.get(url:url , parameter: nil, headers: nil) { (check, Respons: [Offers]?) in
                 guard let response = Respons else { return }
                 self.offers = response
                 self.offersTV.reloadData()
-                
             }
         }
     }
-
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return offers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let localOffers = offers[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "OffersCell", for: indexPath) as! OffersCell
         ////// for get image from the internet using kingFisher
-        var stringImage = String(describing: offers[indexPath.row].image ?? "")
+        var stringImage = String(describing: localOffers.image ?? "")
         if stringImage.contains(" ") {
             stringImage = stringImage.replacingOccurrences(of: " ", with: "%20")
         }

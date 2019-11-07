@@ -45,14 +45,10 @@ class RestaurantsVC: UIViewController {
                     guard let response = Response else {return}
                     self.providers = response
                     self.bottomTableView.reloadData()
-                    
-                    
-                    
             })
-            
         }
     }
-    
+
 }
 
 extension RestaurantsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -62,10 +58,10 @@ extension RestaurantsVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let Localcategories = categories[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoriesCell", for: indexPath) as! CategoriesCell
-        
         ////// for get image from the internet using kingFisher
-        var stringImage = String(describing: categories[indexPath.row].image ?? "")
+        var stringImage = String(describing: Localcategories.image ?? "")
         if stringImage.contains(" ") {
             stringImage = stringImage.replacingOccurrences(of: " ", with: "%20")
         }
@@ -75,7 +71,7 @@ extension RestaurantsVC: UICollectionViewDelegate, UICollectionViewDataSource, U
             cell.categoriesImage.kf.setImage(with: url, placeholder: UIImage(named: "map"), options: [.transition(ImageTransition.flipFromTop(0.5))])
         }
         //////
-        cell.categoriesLB.text = categories[indexPath.row].name ?? ""
+        cell.categoriesLB.text = Localcategories.name ?? ""
         return cell
     }
     
@@ -83,5 +79,4 @@ extension RestaurantsVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: categoriesCV.frame.width/3.5, height: categoriesCV.frame.height - 30)
     }
-    
 }

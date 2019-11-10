@@ -14,5 +14,5 @@ class OnBoardCell: UICollectionViewCell {
     @IBOutlet weak var firstLB: UILabel!
     @IBOutlet weak var secondLB: UILabel!
     
-    
+   
 }

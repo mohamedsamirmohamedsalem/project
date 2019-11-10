@@ -12,6 +12,7 @@
 		600D8CD42377032900F75FCD /* ProvidersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 600D8CD22377032900F75FCD /* ProvidersTableViewCell.xib */; };
 		600F50112377354300D62C8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600F50102377354300D62C8D /* Constants.swift */; };
 		600FA18C2349550D005452C7 /* NewResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FA18B2349550D005452C7 /* NewResturantCell.swift */; };
+		60139A36237854ED00113118 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60139A35237854ED00113118 /* AccountVC.swift */; };
 		6014E04E2348EB81001E7E48 /* GeneralSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6014E04D2348EB81001E7E48 /* GeneralSideMenuVC.swift */; };
 		601566272349133300D9EA45 /* TableViewCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601566262349133300D9EA45 /* TableViewCorners.swift */; };
 		60156629234915A800D9EA45 /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60156628234915A800D9EA45 /* OffersCell.swift */; };
@@ -60,6 +61,7 @@
 		600D8CD22377032900F75FCD /* ProvidersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProvidersTableViewCell.xib; sourceTree = "<group>"; };
 		600F50102377354300D62C8D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		600FA18B2349550D005452C7 /* NewResturantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResturantCell.swift; sourceTree = "<group>"; };
+		60139A35237854ED00113118 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		6014E04D2348EB81001E7E48 /* GeneralSideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSideMenuVC.swift; sourceTree = "<group>"; };
 		601566262349133300D9EA45 /* TableViewCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCorners.swift; sourceTree = "<group>"; };
 		60156628234915A800D9EA45 /* OffersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCell.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			children = (
 				609DAACB233D70E400ADA03D /* Authentication */,
 				609DAAC8233D70E400ADA03D /* Foods */,
+				60139A35237854ED00113118 /* AccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				60156629234915A800D9EA45 /* OffersCell.swift in Sources */,
 				609DAAE5233D70E500ADA03D /* RegisterResponse.swift in Sources */,
 				609DAAE9233D70E500ADA03D /* AppDelegate.swift in Sources */,
+				60139A36237854ED00113118 /* AccountVC.swift in Sources */,
 				609DAAF3233D70E500ADA03D /* TextFieldPadding.swift in Sources */,
 				609DAAFA233D70E500ADA03D /* API.swift in Sources */,
 				609DAAEB233D70E500ADA03D /* ViewController.swift in Sources */,

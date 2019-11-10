@@ -523,7 +523,7 @@ over 1,000 resturant</string>
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="250.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mlE-In-tYf">
-                                                <rect key="frame" x="67" y="0.0" width="280" height="98.5"/>
+                                                <rect key="frame" x="67" y="0.0" width="280" height="118.5"/>
                                                 <color key="backgroundColor" red="0.94382888080000005" green="0.3566709757" blue="0.36534103750000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="53"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -533,7 +533,7 @@ over 1,000 resturant</string>
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Discover the best foods from over 1,000 resturan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0sp-NH-wmP">
-                                                <rect key="frame" x="36.5" y="98.5" width="341" height="102"/>
+                                                <rect key="frame" x="36.5" y="118.5" width="341" height="82"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -695,7 +695,7 @@ over 1,000 resturant</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuI-Wk-GzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5158" y="870"/>
+            <point key="canvasLocation" x="5229" y="870"/>
         </scene>
         <!--Popular Table View Controller-->
         <scene sceneID="Z1m-7j-6tr">
@@ -947,35 +947,86 @@ special meals and more</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQt-yd-JHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5812" y="870"/>
+            <point key="canvasLocation" x="5903" y="870"/>
         </scene>
         <!--Account-->
         <scene sceneID="XGz-lQ-Z7a">
             <objects>
-                <viewController id="Y6T-mV-kEH" sceneMemberID="viewController">
+                <viewController id="Y6T-mV-kEH" customClass="AccountVC" customModule="projectV5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uWx-1R-FO8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fast Delivery" translatesAutoresizingMaskIntoConstraints="NO" id="YwO-Eo-7d4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="725"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ag3-ML-4Wv">
+                                <rect key="frame" x="15" y="60" width="384" height="126.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="de9-hI-qct">
+                                        <rect key="frame" x="0.0" y="0.0" width="126.5" height="126.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="de9-hI-qct" secondAttribute="height" multiplier="1:1" id="Mge-rd-S2U"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pOo-X0-ELU">
+                                        <rect key="frame" x="151.5" y="34" width="232.5" height="58.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mohamed Samir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-qt-qFj">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="29"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mohamedsamir@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="6Mc-bB-XmD">
+                                                <rect key="frame" x="0.0" y="39" width="201" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="de9-hI-qct" firstAttribute="width" secondItem="Ag3-ML-4Wv" secondAttribute="width" multiplier="0.33" id="6Q6-TH-5sq"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1lj-we-G6M">
+                                <rect key="frame" x="0.0" y="226.5" width="414" height="542.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountVC" rowHeight="101" id="yU5-9T-2nX">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yU5-9T-2nX" id="J7c-eM-lbb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98761520737327191" green="0.98761520737327191" blue="0.98761520737327191" alpha="0.99821159638554213" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YwO-Eo-7d4" firstAttribute="top" secondItem="GpR-bX-s0s" secondAttribute="top" id="HkK-Di-PwA"/>
-                            <constraint firstItem="GpR-bX-s0s" firstAttribute="bottom" secondItem="YwO-Eo-7d4" secondAttribute="bottom" id="Sl1-ui-xxl"/>
-                            <constraint firstItem="GpR-bX-s0s" firstAttribute="trailing" secondItem="YwO-Eo-7d4" secondAttribute="trailing" id="WWZ-H7-BJr"/>
-                            <constraint firstItem="YwO-Eo-7d4" firstAttribute="leading" secondItem="GpR-bX-s0s" secondAttribute="leading" id="l1t-EH-tZi"/>
+                            <constraint firstItem="1lj-we-G6M" firstAttribute="top" secondItem="Ag3-ML-4Wv" secondAttribute="bottom" constant="40" id="5cP-aD-gLi"/>
+                            <constraint firstItem="GpR-bX-s0s" firstAttribute="trailing" secondItem="1lj-we-G6M" secondAttribute="trailing" id="7JY-cr-Fpm"/>
+                            <constraint firstItem="Ag3-ML-4Wv" firstAttribute="leading" secondItem="GpR-bX-s0s" secondAttribute="leading" constant="15" id="9dG-xI-9sr"/>
+                            <constraint firstItem="GpR-bX-s0s" firstAttribute="trailing" secondItem="Ag3-ML-4Wv" secondAttribute="trailing" constant="15" id="FN6-Rw-PlI"/>
+                            <constraint firstItem="1lj-we-G6M" firstAttribute="leading" secondItem="GpR-bX-s0s" secondAttribute="leading" id="Hxg-Mm-qNq"/>
+                            <constraint firstItem="GpR-bX-s0s" firstAttribute="bottom" secondItem="1lj-we-G6M" secondAttribute="bottom" id="Q14-o0-qfZ"/>
+                            <constraint firstItem="Ag3-ML-4Wv" firstAttribute="top" secondItem="uWx-1R-FO8" secondAttribute="top" constant="60" id="g1g-aG-nUc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GpR-bX-s0s"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="person.fill" catalog="system" id="9Ol-Dn-xKJ"/>
                     <navigationItem key="navigationItem" id="9Yf-kR-xBx"/>
+                    <connections>
+                        <outlet property="TableView" destination="1lj-we-G6M" id="Vks-KS-ap6"/>
+                        <outlet property="accountEmailLabel" destination="6Mc-bB-XmD" id="iXb-GN-wGM"/>
+                        <outlet property="accountImage" destination="de9-hI-qct" id="fnK-zs-IHo"/>
+                        <outlet property="accountNameLabel" destination="dXD-qt-qFj" id="uu0-px-kEk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lA6-f0-KVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6480" y="870"/>
+            <point key="canvasLocation" x="6566.666666666667" y="869.86607142857144"/>
         </scene>
         <!--General Side MenuVC-->
         <scene sceneID="qbA-tz-P2e">
@@ -1027,7 +1078,7 @@ special meals and more</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APn-Zd-WUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4941" y="141"/>
+            <point key="canvasLocation" x="5123" y="141"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WtQ-YC-Doj">
@@ -1050,7 +1101,7 @@ special meals and more</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QsM-cd-mgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5813" y="141"/>
+            <point key="canvasLocation" x="5903" y="141"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2rn-ZY-DuF">
@@ -1127,7 +1178,7 @@ special meals and more</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOZ-72-gCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5620" y="-610"/>
+            <point key="canvasLocation" x="5125" y="-191"/>
         </scene>
         <!--Popular ChoicesVC-->
         <scene sceneID="3A4-u4-2f9">
@@ -1344,7 +1395,6 @@ special meals and more</string>
     </scenes>
     <resources>
         <image name="Facebook" width="20" height="35"/>
-        <image name="Fast Delivery" width="150" height="148.5"/>
         <image name="Foods" width="256" height="256"/>
         <image name="Happy Meal" width="236" height="349"/>
         <image name="arrow.down.circle.fill" catalog="system" width="64" height="60"/>

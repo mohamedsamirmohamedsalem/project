@@ -11,11 +11,13 @@ import UIKit
 class CategoriesVC: UIViewController {
     
     var providers : [ProvidersByCatagories]?
-    
+    //MARK :- IBOutlets
     @IBOutlet var TableView: UITableView!
     @IBOutlet var SearchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         SearchBar.delegate = self
         TableView.delegate = self
         TableView.dataSource = self
@@ -33,6 +35,8 @@ class CategoriesVC: UIViewController {
         TableView.RegisterNib(Cell: CategoryMainTableViewCell.self)
         TableView.RegisterNib(Cell: ProvidersTableViewCell.self)
         
+        // remove lines before and after search bar
+        SearchBar.backgroundImage = UIImage()
         TableView.separatorStyle = .none
         TableView.reloadData()
     }
@@ -46,6 +50,10 @@ class CategoriesVC: UIViewController {
         self.TableView.endUpdates()
       
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+         super.viewDidAppear(animated)
+     }
     /////////////////////////////////////////////////////////////////////////////////
     func getProviders(){
         DispatchQueue.main.async {
@@ -59,14 +67,15 @@ class CategoriesVC: UIViewController {
         }
     }
     //////////////////////////////////////////////////////////////////////////////////////
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
+ 
     
     @IBAction func showSideMenu(_ sender: UIButton) {
         NotificationCenter.default.post(name: NSNotification.Name("sideMenu"), object: nil)
     }
     
+    @IBAction func goTo_popularChoices_VC(_ sender: UIButton) {
+        shouldPerformSegue(withIdentifier: "PopularChoicesVC", sender: nil)
+    }
 }
 ///////////////////////////////////////////////////////////////////////
 extension CategoriesVC : UITableViewDelegate , UITableViewDataSource {
@@ -95,6 +104,7 @@ extension CategoriesVC : UITableViewDelegate , UITableViewDataSource {
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if indexPath.section == 0 {
             let cell = tableView.dequeue(IndexPath: indexPath) as CategoryMainTableViewCell
             cell.selectionStyle = .none

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="189" id="KGk-i7-Jjw" customClass="PopularChoicesMainTableViewCell" customModule="projectV5" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="189"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="189"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UnU-9F-8UF">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="161"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1MA-JU-8KO">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="tas-v4-hjx"/>
+                            <outlet property="delegate" destination="-1" id="7lW-dS-dj6"/>
+                        </connections>
+                    </collectionView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="129" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFu-yr-KwG">
+                        <rect key="frame" x="0.0" y="161" width="343" height="28"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugb-l2-J47">
+                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="0.94466423990000004" green="0.36048498750000002" blue="0.35275667910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRj-FF-hUH">
+                                <rect key="frame" x="286.5" y="0.0" width="56.5" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Show All">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="iFu-yr-KwG" secondAttribute="trailing" id="4EJ-Ld-Zvh"/>
+                    <constraint firstItem="iFu-yr-KwG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FQA-ZR-Tbx"/>
+                    <constraint firstItem="iFu-yr-KwG" firstAttribute="top" secondItem="UnU-9F-8UF" secondAttribute="bottom" id="J82-k2-REy"/>
+                    <constraint firstItem="UnU-9F-8UF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZeE-kU-eBc"/>
+                    <constraint firstAttribute="bottom" secondItem="iFu-yr-KwG" secondAttribute="bottom" id="grI-en-np8"/>
+                    <constraint firstItem="UnU-9F-8UF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jBY-Nf-00k"/>
+                    <constraint firstAttribute="trailing" secondItem="UnU-9F-8UF" secondAttribute="trailing" id="oYo-Mq-XFO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="MainCollectionViewCell" destination="UnU-9F-8UF" id="NQe-eo-p2d"/>
+            </connections>
+            <point key="canvasLocation" x="148.55072463768118" y="162.38839285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

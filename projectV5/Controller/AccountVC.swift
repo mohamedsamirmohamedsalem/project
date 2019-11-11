@@ -46,10 +46,16 @@ extension AccountVC : UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AccountVC", for: indexPath)
         cell.textLabel?.text = tableData[indexPath.row]
         // to add disclosure Indicator (arrow) in each cell
-        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-       
-        cell.tintColor = UIColor.black
-        
+        cell.accessoryType = .disclosureIndicator
+        /* if you want to change corol of indicator
+        // set image graater than in each cell
+        if #available(iOS 13.0, *) {
+            let image = UIImage(systemName: "greaterthan")
+            cell.accessoryView = UIImageView(image: image)
+        } else {
+            // Fallback on earlier versions
+        }
+       */
         return cell
     }
     

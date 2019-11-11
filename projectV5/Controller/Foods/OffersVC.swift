@@ -10,6 +10,7 @@ import UIKit
 import Kingfisher
 
 class OffersVC: UIViewController , UITableViewDelegate , UITableViewDataSource{
+    
     var offers: [Offers]?
     @IBOutlet weak var offersTV: TaTableViewCorners!
     override func viewDidLoad() {
@@ -34,29 +35,35 @@ class OffersVC: UIViewController , UITableViewDelegate , UITableViewDataSource{
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return offers?.count ?? 5
+        if offers?.count == 0 {
+            return 10
+        }else{
+            return offers!.count
+        }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return SCREEN_HEIGHT / 3
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OffersCell", for: indexPath) as! OffersCell
-        if let localOffers = offers?[indexPath.row]{
-            ////// for get image from the internet using kingFisher
-            var stringImage = String(describing: localOffers.image ?? "")
-            if stringImage.contains(" ") {
-                stringImage = stringImage.replacingOccurrences(of: " ", with: "%20")
-            }
-            if stringImage != "" {
-                let url = URL(string: stringImage)
-                cell.mealImage.kf.indicatorType = .activity
-                cell.mealImage.kf.setImage(with: url, placeholder: UIImage(named: "map"), options: [.transition(ImageTransition.flipFromTop(0.5))], progressBlock: nil, completionHandler: nil)
-            }
+            if offers?.count != 0 {
+                let localOffers = offers?[indexPath.row]
+                ////// for get image from the internet using kingFisher
+                var stringImage = String(describing: localOffers?.image ?? "")
+                if stringImage.contains(" ") {
+                    stringImage = stringImage.replacingOccurrences(of: " ", with: "%20")
+                }
+                if stringImage != "" {
+                    let url = URL(string: stringImage)
+                    cell.mealImage.kf.indicatorType = .activity
+                    cell.mealImage.kf.setImage(with: url, placeholder: UIImage(named: "map"), options: [.transition(ImageTransition.flipFromTop(0.5))], progressBlock: nil, completionHandler: nil)
+                }
+            }else{
+                cell.mealImage.image = #imageLiteral(resourceName: "burger_male")
         }
         //////
         return cell
     }
-    
-    
-    
-    
-    
 }
+

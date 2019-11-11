@@ -76,7 +76,12 @@ class CategoriesVC: UIViewController {
     @IBAction func goTo_popularChoices_VC(_ sender: UIButton) {
         shouldPerformSegue(withIdentifier: "PopularChoicesVC", sender: nil)
     }
+    @IBAction func getMyLocation(_ sender: UIButton) {
+        shouldPerformSegue(withIdentifier: "MapKitVC", sender: nil)
+    }
 }
+
+
 ///////////////////////////////////////////////////////////////////////
 extension CategoriesVC : UITableViewDelegate , UITableViewDataSource {
     

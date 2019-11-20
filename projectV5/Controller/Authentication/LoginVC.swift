@@ -117,8 +117,9 @@ class LoginVC: UIViewController {
     }
     
     @objc func buttonAction(){
-        let story = UIStoryboard(name:"Main",bundle: nil).instantiateViewController(withIdentifier:"ForgetPasswordVC")
+        let story = UIStoryboard(name:"Main",bundle: nil).instantiateViewController(withIdentifier:"tabBarController")
         present(story, animated: true, completion: nil)
+       
     }
     
     ///////////////////////////////////////////////////////////////////////////////////////////

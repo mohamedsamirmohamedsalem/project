@@ -43,6 +43,7 @@ class CategoriesVC: UIViewController {
   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+         self.hidesBottomBarWhenPushed = false
         getProviders()
         print("====================>\(providers?.count)")
         self.TableView.reloadData()
@@ -54,6 +55,11 @@ class CategoriesVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
          super.viewDidAppear(animated)
      }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        self.hidesBottomBarWhenPushed = false
+    }
     /////////////////////////////////////////////////////////////////////////////////
     func getProviders(){
         DispatchQueue.main.async {

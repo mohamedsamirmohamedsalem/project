@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.9.1)
+  - IQKeyboardManager (6.5.4)
+  - Kingfisher (4.10.1)
+  - MOLH (1.1)
+  - SideMenu (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - IQKeyboardManager
+  - Kingfisher
+  - MOLH
+  - SideMenu (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManager
+    - Kingfisher
+    - MOLH
+    - SideMenu
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  IQKeyboardManager: 72b359cd7e777e3a984cedbe05f8da45320cbb63
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  MOLH: fb55e7f76f41f6d9b969a4f99a1f83d30bb996f6
+  SideMenu: 87efd943737bb83aedf0358884d09fcf5576636d
+
+PODFILE CHECKSUM: 2ae3de6569279a750280310b2562c2bddf1e8403
+
+COCOAPODS: 1.8.4
